@@ -1,0 +1,87 @@
+body {
+	margin: auto;
+	background-image: url("file:///C:/Users/Ndeshi%20Kali/Desktop/Life/Web%20Development/Projects/UneVerre/Style/UneVerreBackground.jpg");
+}
+
+.navbar {
+  background: #2b2e33;
+	text-align: center;
+	color: white;
+}
+
+.navbar h1{
+  display: inline;
+	font-size: 75px;
+	font-family: Courier;
+}
+
+.navbar a {
+	color: white;
+}
+
+.slideshow img {
+	width: 600px;
+	height: auto;
+	max-width: 100%;
+	min-width: 600px;
+
+}
+
+.slideshow {
+	padding: 1px;
+	width: 70%;
+ 	margin-left: auto;
+ 	margin-right: auto;
+  text-align: center;
+}
+
+.footer{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background: white;
+  color: DimGrey;
+  font-family: 'Lora', serif;
+
+}
+
+.footer ul li{
+  list-style: none;
+}
+
+.footer p{
+	text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+	background: none;
+	border-style: none;
+	font-weight: bold;
+	color: black;
+
+}
+.glow {
+	font-size: 20px;
+	font-style: Courier;
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar{
+		text-align: left;
+    width: auto;
+}
+	.navbar h1{
+		font-size: 50px;
+	}
+
+	.slideshow img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+}
