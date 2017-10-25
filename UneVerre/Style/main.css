@@ -1,6 +1,6 @@
 body {
 	margin: auto;
-	background-image: url("file:///C:/Users/Ndeshi%20Kali/Desktop/Life/Web%20Development/Projects/UneVerre/Style/UneVerreBackground.jpg");
+	background-image: url("file:///C:/Users/Student/Documents/Projects/UneVerre/Style/UneVerreBackground.jpg");
 }
 
 .navbar {
@@ -15,16 +15,12 @@ body {
 	font-family: Courier;
 }
 
-.navbar a {
-	color: white;
-}
 
 .slideshow img {
 	width: 600px;
 	height: auto;
 	max-width: 100%;
 	min-width: 600px;
-
 }
 
 .slideshow {
@@ -32,8 +28,10 @@ body {
 	width: 70%;
  	margin-left: auto;
  	margin-right: auto;
-  text-align: center;
+  	text-align: center;
 }
+
+
 
 .footer{
   width: 50%;
@@ -63,11 +61,16 @@ button {
 	border-style: none;
 	font-weight: bold;
 	color: black;
+}
 
+.buttons{
+ 	color: black;
 }
 .glow {
 	font-size: 20px;
 	font-style: Courier;
+	color: black;
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -79,9 +82,11 @@ button {
 		font-size: 50px;
 	}
 
+
 	.slideshow img {
 		max-width: 100%;
 		height: auto;
 		display: block;
+		min-width: 200px;
 	}
 }
