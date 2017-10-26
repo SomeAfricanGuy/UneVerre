@@ -1,5 +1,5 @@
     var sum;
-    var imgArr = new Array();
+    let imgArr = new Array();
 
 
    imgArr[0] = new Image();
@@ -39,34 +39,36 @@
    imgArr[11] = document.getElementById('slide-pic12');
 
 function showEmail(){
-  alert("hopek@uneverre.co.za");
+      alert("hopek@uneverre.co.za");
+
+
 }
 
 function showCellPhone(){
   alert("+27798959604");
 }
 
-function goNext(element) {
+function goNext() {
     for (var i = 0; i < imgArr.length; i++) {
-      var x = i+1;
-      if (imgArr[i].className === "current") {
+      if (imgArr[i].className === "current" && i < 11) {
 
         imgArr[i].className = "hide";
-        imgArr[x].className = "current";
+        imgArr[i+1].className = "current";
         break;
+      }else if(i >= 11){
+        alert('End of Slide');
       }
 
      }
 }
 
 function goPrevious() {
-    for (var i = 0; i < imgArr.length; i++) {
-      var x = i-1;
-      var y = imgArr.length + 1;
+        var y = imgArr.length + 1;
+    for (var i = 0; i < 12; i++) {
       if (imgArr[i].className === "current") {
 
         imgArr[i].className = "hide";
-        imgArr[x].className = "current";
+        imgArr[i-1].className = "current";
         break;
       }
     }
