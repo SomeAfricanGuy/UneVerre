@@ -1,6 +1,5 @@
-    var sum;
-    let imgArr = new Array();
-
+  let imgArr = new Array();
+   
 
    imgArr[0] = new Image();
    imgArr[0] = document.getElementById('slide-pic1');
@@ -39,38 +38,44 @@
    imgArr[11] = document.getElementById('slide-pic12');
 
 function showEmail(){
-      alert("hopek@uneverre.co.za");
-
-
+      alert(`hopek@uneverre.co.za`);
 }
 
 function showCellPhone(){
-  alert("+27798959604");
+  alert(`+27798959604`);
 }
 
 function goNext() {
-    for (var i = 0; i < imgArr.length; i++) {
-      if (imgArr[i].className === "current" && i < 11) {
-
+  for (let i = 0; i < imgArr.length; i++) {
+    let temp = i+1;
+    let showLength = imgArr.length;
+    if (imgArr[i].className === "current" && i < 11) {
+      if (i === showLength - 2)  {
+          imgArr[i].className = "hide";
+          imgArr[0].className = "current";
+      }else{
         imgArr[i].className = "hide";
-        imgArr[i+1].className = "current";
-        break;
-      }else if(i >= 11){
-        alert('End of Slide');
-      }
-
-     }
+        imgArr[temp].className = "current";
+      }    
+      break;
+    }
+  }
 }
 
-function goPrevious() {
-        var y = imgArr.length + 1;
-    for (var i = 0; i < 12; i++) {
-      if (imgArr[i].className === "current") {
 
+function goPrevious() {
+    for (let i = 0; i < 12; i++) {
+        let temp = i-1;
+        if (imgArr[i].className === "current" && i < 11) {
+      if (temp < 0)  {
+          imgArr[i].className = "hide";
+          imgArr[10].className = "current";
+      }else{
         imgArr[i].className = "hide";
-        imgArr[i-1].className = "current";
-        break;
-      }
+        imgArr[temp].className = "current";
+      }    
+      break;
+    }
     }
 }
 
